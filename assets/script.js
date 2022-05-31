@@ -30,7 +30,7 @@ function format() {
 
 format()
 
-//sets local storage to save tasks
+//sets local storage to save tasks upon save button click
 $('.saveBtn').on('click', function(){
 
         // the parent div id

@@ -6,14 +6,24 @@ $("#currentDay").text(today.format("MMM Do, YYYY"));
 //current time via momentjs
 // console.log(presentHour);
 
+//DECLARED FUNCTIONS
+
 function format() {
     var presentHour = moment().hours();
 
     $('.time-block').each(function(){
         var hour = parseInt($(this).attr('id'));
 
+        if (hour === presentHour){
+            $(this).addClass('present');
+        }
+
         if (hour < presentHour){
             $(this).addClass('past')
+        }
+
+        if (hour > presentHour){
+            $(this).addClass('future');
         }
     })
 
